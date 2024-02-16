@@ -5,8 +5,11 @@ import emailjs from '@emailjs/browser'
 import {useState,useEffect,useRef} from'react';
 import 'leaflet/dist/leaflet.css';
 import { Marker, Popup, MapContainer,TileLayer } from 'react-leaflet';
+import {faLinkedin,faGithub } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import markerIcon from '../../assets/images/marker-icon.png';
 import L from 'leaflet';
+import { faEnvelope, faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 
   
@@ -48,7 +51,7 @@ const Contact =()=>{
     return (
         <>
         <div className='container contact-page'>
-           <div className='text-zone'>s
+           <div className='text-zone'>
             <h1>
                 <AnimatedLetters 
                 letterClass={letterClass}
@@ -86,13 +89,28 @@ const Contact =()=>{
             </div>
            </div>
            <div className='info-map'>
-            Ananya Misra,
-            <br/>
-            INDIA,
-            <br/>
-            District 13 Baker Street, Near the Mart Lane,<br/>
-            Lucknow, Uttar Pradesh <br/>
-            <span>anumisra2@gmail.com</span>
+            <h1>
+            Check out my socials.&nbsp;<FontAwesomeIcon icon={faQuoteRight}/>
+          
+            </h1>
+           
+    
+            
+            <div className='mt-3 flex gap-7 items-center justify-start'>
+         
+            <a target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/ananya--misra/'>
+                    <FontAwesomeIcon className='fa-lg' icon={faLinkedin}/>
+                </a>
+           
+                <a target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/ananya--misra/'>
+                    <FontAwesomeIcon className='fa-lg' icon={faGithub} />
+                </a>
+
+                <a target="_blank" rel="noreferrer" href="mailto:anumisra2@gmail.com">
+                    <FontAwesomeIcon className='fa-lg' icon={faEnvelope} />
+                </a>
+                       
+            </div>
            </div>
            <div className='map-wrap'>
             <MapContainer center={[26.880410, 80.991520]} zoom={13}>

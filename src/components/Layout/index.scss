@@ -38,7 +38,7 @@
 }
 
 // About section
-.about-page,.contact-page{
+.about-page,.contact-page,.experience-page, .project-page{
 
     .text-zone{
         position:absolute;
@@ -116,5 +116,12 @@
 .contact-page{
     .text-zone{
         transform:translateY(10%);
+    }
+}
+
+.project-page{
+    .text-zone{
+        transform:translateY(20%);
+        width:90vw;
     }
 }
